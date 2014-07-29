@@ -17,8 +17,8 @@ Types of polyfills:
 - polyfills - runtime JS polyfills for [polyfills](http://github.com/polyfills/polyfills)
 - recast - JS transpilation using [recast](https://github.com/benjamn/recast) and [ecstacy](https://github.com/polyfills/ecstacy)
 
-[npm-image]: https://img.shields.io/npm/v/db.svg?style=flat
-[npm-url]: https://npmjs.org/package/db
+[npm-image]: https://img.shields.io/npm/v/polyfills-db.svg?style=flat
+[npm-url]: https://npmjs.org/package/polyfills-db
 [travis-image]: https://img.shields.io/travis/polyfills/db.svg?style=flat
 [travis-url]: https://travis-ci.org/polyfills/db
 [coveralls-image]: https://img.shields.io/coveralls/polyfills/db.svg?style=flat
