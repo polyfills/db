@@ -10,15 +10,17 @@
   },
   "license": "MIT",
   "repository": "polyfills/db",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "semver": "3",
     "useragent": "2",
+    "flatten": "0"
+  },
+  "devDependencies": {
     "mocha": "1",
     "istanbul": "0"
   },
   "scripts": {
-    "test": "mocha --reporter spec",
+    "test": "mocha --reporter spec --bail",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot",
     "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot"
   },
@@ -30,5 +32,5 @@
     "detects"
   ],
   "main": "lib",
-  "files": "lib"
+  "files": ["lib"]
 }

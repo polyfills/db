@@ -2,8 +2,6 @@
 var assert = require('assert')
 var ua = require('useragent')
 
-require('useragent/features')
-
 var db = require('..')
 
 // http://www.useragentstring.com/pages/Firefox/
@@ -12,17 +10,112 @@ var ie8 = 'Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; Media
 var ios51 = 'Mozilla/5.0 (iPad; CPU OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3'
 var android403 = 'Mozilla/5.0 (Linux; U; Android 4.0.3; ko-kr; LG-L160L Build/IML74K) AppleWebkit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30'
 var ff31 = 'Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0'
+var safari7 = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.77.4 (KHTML, like Gecko) Version/7.0.5 Safari/537.77.4'
+
+describe('Agents', function () {
+  describe('.parse()', function () {
+    it('should support falsey', function () {
+      var agents = db.agents.parse(null)
+      assert.equal(1, agents.length)
+      var agent = agents.shift()
+      assert(/unknown/i.test(agent.family))
+    })
+
+    it('useragent strings', function () {
+      var agents = db.agents.parse(chrome36)
+      assert.equal(1, agents.length)
+      var agent = agents.shift()
+      assert(agent.family.match(/\bchrome\b/i))
+      assert.equal('36', agent.major)
+    })
+
+    it('objects', function () {
+      var agents = db.agents.parse({
+        family: 'chrome',
+        major: 36
+      })
+      assert.equal(1, agents.length)
+      var agent = agents.shift()
+      assert(agent.family.match(/\bchrome\b/i))
+      assert.equal('36', agent.major)
+    })
+
+    it('arrays', function () {
+      var agents = db.agents.parse([
+        chrome36,
+        {
+          family: 'chrome',
+          major: 26
+        }
+      ])
+      assert.equal(2, agents.length)
+      var agent = agents.shift()
+      assert(agent.family.match(/\bchrome\b/i))
+      assert.equal('36', agent.major)
+      var agent = agents.shift()
+      assert(agent.family.match(/\bchrome\b/i))
+      assert.equal(26, agent.major)
+    })
+  })
+
+  describe('.compile()', function () {
+    it('should favor ios over safari', function () {
+      var fn = db.agents.compile({
+        ios: 7,
+        safari: 6
+      })
+      assert(!fn({
+        family: 'mobile safari',
+        major: 7
+      }))
+
+      assert(fn({
+        family: 'mobile safari',
+        major: 6
+      }))
+
+      assert(!fn({
+        family: 'safari',
+        major: 7
+      }))
+
+      assert(!fn({
+        family: 'safari',
+        major: 6
+      }))
+
+      assert(fn({
+        family: 'safari',
+        major: 5
+      }))
+    })
+  })
+
+  describe('.filter()', function () {
+    it('should pass if any agents satisfy', function () {
+      var transforms = [db.recast.transform.generators]
+      var agents = [{
+        family: 'firefox',
+        major: 27 // after generators
+      }, {
+        family: 'firefox',
+        major: 25 // before generators
+      }]
+      assert(db.agents.filter(transforms, agents))
+    })
+  })
+})
 
 describe('Recast', function () {
   describe('Generators', function () {
     it('.filter(Chrome 36)', function () {
-      var agent = ua.parse(chrome36)
+      var agent = db.agents.parse(chrome36)[0]
       var regenerator = db.recast.transform.generators
       assert(regenerator.filter(agent))
     })
 
     it('.filter(Firefox 31)', function () {
-      var agent = ua.parse(ff31)
+      var agent = db.agents.parse(ff31)[0]
       var regenerator = db.recast.transform.generators
       assert(!regenerator.filter(agent))
     })
@@ -40,7 +133,7 @@ describe('Recast', function () {
 describe('Polyfills', function () {
   describe('ES5', function () {
     it('.filter(IE 8)', function () {
-      var agent = ua.parse(ie8)
+      var agent = db.agents.parse(ie8)[0]
       var es5 = db.polyfills.polyfill.es5
       assert(es5.filter(agent))
     })
@@ -48,13 +141,13 @@ describe('Polyfills', function () {
 
   describe('requestAnimationFrame', function () {
     it('.filter(iOS 5.1)', function () {
-      var agent = ua.parse(ios51)
+      var agent = db.agents.parse(ios51)[0]
       var raf = db.polyfills.polyfill.raf
       assert(raf.filter(agent))
     })
 
     it('.filter(Android 4.0.3)', function () {
-      var agent = ua.parse(android403)
+      var agent = db.agents.parse(android403)[0]
       var raf = db.polyfills.polyfill.raf
       assert(raf.filter(agent))
     })
