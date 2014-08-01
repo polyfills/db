@@ -106,6 +106,13 @@ describe('Agents', function () {
   })
 })
 
+describe('Features', function () {
+  it('should have .id()', function () {
+    var feature = db.recast.transform.generators
+    assert.equal('gens', feature.id())
+  })
+})
+
 describe('Recast', function () {
   describe('Generators', function () {
     it('.filter(Chrome 36)', function () {
