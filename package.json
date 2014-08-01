@@ -1,7 +1,7 @@
 {
   "name": "polyfills-db",
   "description": "browser feature database",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Jonathan Ong",
     "email": "me@jongleberry.com",
@@ -32,5 +32,7 @@
     "detects"
   ],
   "main": "lib",
-  "files": ["lib"]
+  "files": [
+    "lib"
+  ]
 }
