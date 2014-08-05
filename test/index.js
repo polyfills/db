@@ -137,6 +137,22 @@ describe('Recast', function () {
   })
 })
 
+describe('PostCSS', function () {
+  describe('calc()', function () {
+    it('.filter(Chrome 36)', function () {
+      var agent = db.agents.parse(chrome36)[0]
+      var calc = db.postcss.transform.calc
+      assert(!calc.filter(agent))
+    })
+
+    it('.filter(IE8)', function () {
+      var agent = db.agents.parse(ie8)[0]
+      var calc = db.postcss.transform.calc
+      assert(calc.filter(agent))
+    })
+  })
+})
+
 describe('Polyfills', function () {
   describe('ES5', function () {
     it('.filter(IE 8)', function () {
