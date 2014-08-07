@@ -17,7 +17,18 @@
     "flatten": "0"
   },
   "devDependencies": {
+    "recast": "0",
     "regenerator": "0",
+    "es6-class": "0",
+    "es6-arrow-function": "0",
+    "es6-templates": "0",
+    "es6-rest-params": "0",
+    "es6-default-params": "0",
+    "es6-spread": "0",
+    "es6-comprehensions": "0",
+    "postcss": "2",
+    "autoprefixer": "2",
+    "postcss-calc": "2",
     "mocha": "1",
     "istanbul": "0"
   },
