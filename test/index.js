@@ -126,6 +126,12 @@ describe('Recast', function () {
       var regenerator = db.recast.transform.generators
       assert(!regenerator.filter(agent))
     })
+
+    it('.runtime', function () {
+      var regenerator = db.recast.transform.generators
+      var runtime = regenerator.runtime
+      new Function(runtime)
+    })
   })
 
   describe('Arrow Functions', function () {

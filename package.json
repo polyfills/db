@@ -13,9 +13,11 @@
   "dependencies": {
     "semver": "3",
     "useragent": "2",
+    "memorizer": "1",
     "flatten": "0"
   },
   "devDependencies": {
+    "regenerator": "0",
     "mocha": "1",
     "istanbul": "0"
   },
