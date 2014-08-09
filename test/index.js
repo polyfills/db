@@ -157,6 +157,20 @@ describe('PostCSS', function () {
       assert(calc.filter(agent))
     })
   })
+
+  describe('var()', function () {
+    it('.filter(Firefox 31)', function () {
+      var agent = db.agents.parse(ff31)[0]
+      var vars = db.postcss.transform.variables
+      assert(!vars.filter(agent))
+    })
+
+    it('.filter(Chrome 36)', function () {
+      var agent = db.agents.parse(chrome36)[0]
+      var vars = db.postcss.transform.variables
+      assert(vars.filter(agent))
+    })
+  })
 })
 
 describe('Polyfills', function () {

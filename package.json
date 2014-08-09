@@ -29,6 +29,7 @@
     "postcss": "2",
     "autoprefixer": "2",
     "postcss-calc": "2",
+    "postcss-custom-properties": "0",
     "mocha": "1",
     "istanbul": "0"
   },
