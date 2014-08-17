@@ -111,6 +111,11 @@ describe('Features', function () {
     var feature = db.recast.transform.generators
     assert.equal('gens', feature.id())
   })
+
+  it('should support .version', function () {
+    var feature = db.recast.transform.generators
+    assert.equal(require('regenerator/package.json').version, feature.version)
+  })
 })
 
 describe('Recast', function () {
