@@ -17,6 +17,7 @@
     "flatten": "0"
   },
   "devDependencies": {
+    "strip-comments": "0",
     "recast": "0",
     "regenerator": "0",
     "es6-class": "0",
