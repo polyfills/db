@@ -140,28 +140,6 @@ describe('Recast', function () {
       new Function(runtime)
     })
   })
-
-  describe('Arrow Functions', function () {
-    it('.detect()', function () {
-      var arrow = db.recast.transform.arrowfn
-      assert(arrow.detect('[].map( x => 2 * x)'))
-      assert(arrow.detect('[].map( (x, y) => x * y)'))
-    })
-  })
-})
-
-describe('Detects', function () {
-  describe('Mocha', function () {
-    var mocha = fs.readFileSync(require.resolve('mocha/mocha.js'), 'utf8')
-    mocha = strip(mocha)
-    db.recast.transforms.forEach(function (transform) {
-      if (transform.name === 'templates') {
-        console.error('template string detection must be improved!')
-        return
-      }
-      assert(!transform.detect(mocha), 'transform "' + transform.name + '" failed')
-    })
-  })
 })
 
 describe('PostCSS', function () {
