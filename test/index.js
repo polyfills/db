@@ -194,4 +194,12 @@ describe('Polyfills', function () {
       assert(raf.filter(agent))
     })
   })
+
+  describe('objectobserve', function () {
+    it('above setimmediate', function () {
+      var oidx = db.polyfills.polyfills.indexOf(db.polyfills.polyfill.oobs)
+      var sidx = db.polyfills.polyfills.indexOf(db.polyfills.polyfill.si)
+      assert(oidx < sidx)
+    })
+  })
 })
