@@ -105,6 +105,15 @@ describe('Agents', function () {
       }]
       assert(db.agents.filter(transforms, agents))
     })
+
+    it('should include any transforms where .filter does not exist', function () {
+      var transforms = [{}]
+      var agents = [{
+        family: 'firefox',
+        major: 27
+      }]
+      assert.deepEqual(transforms, db.agents.filter(transforms, agents))
+    })
   })
 })
 
