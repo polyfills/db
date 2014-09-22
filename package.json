@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": "polyfills/db",
   "dependencies": {
-    "semver": "3",
+    "semver": "4",
     "useragent": "2",
     "memorizer": "1",
     "flatten": "0"
