@@ -31,6 +31,8 @@ Some helpful resources are:
 - [caniuse](http://caniuse.com)
 - [MDN](https://developer.mozilla.org/en-US/)
 - [ES Compatibility Table](http://kangax.github.io/compat-table/es6/)
+- [esnext](https://github.com/esnext/esnext) and its [organization](https://github.com/esnext)
+- [cssnext](https://github.com/cssnext/cssnext) and the [postcss organization](https://github.com/postcss)
 
 [npm-image]: https://img.shields.io/npm/v/polyfills-db.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/polyfills-db
