@@ -21,6 +21,17 @@ Types of polyfills:
 - recast - JS transpilation using [recast](https://github.com/benjamn/recast) and [ecstacy](https://github.com/polyfills/ecstacy)
 - postcss - CSS transpilation using [postcss](https://github.com/postcss/postcss) and [ecstacy](https://github.com/polyfills/ecstacy)
 
+## Help Maintaining
+
+All updates are currently done manually.
+Please help add polyfills and update the relevant versions.
+Some helpful resources are:
+
+- [HTML5 Cross Browser Polyfills](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills)
+- [caniuse](http://caniuse.com)
+- [MDN](https://developer.mozilla.org/en-US/)
+- [ES Compatibility Table](http://kangax.github.io/compat-table/es6/)
+
 [npm-image]: https://img.shields.io/npm/v/polyfills-db.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/polyfills-db
 [github-tag]: http://img.shields.io/github/tag/polyfills/db.svg?style=flat-square
