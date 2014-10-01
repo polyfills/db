@@ -13,6 +13,7 @@ var ios51 = 'Mozilla/5.0 (iPad; CPU OS 5_0 like Mac OS X) AppleWebKit/534.46 (KH
 var android403 = 'Mozilla/5.0 (Linux; U; Android 4.0.3; ko-kr; LG-L160L Build/IML74K) AppleWebkit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30'
 var ff31 = 'Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0'
 var safari7 = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.77.4 (KHTML, like Gecko) Version/7.0.5 Safari/537.77.4'
+var opera1214 = 'Opera/9.80 (Windows NT 6.0) Presto/2.12.388 Version/12.14'
 
 describe('Agents', function () {
   describe('.parse()', function () {
@@ -209,6 +210,14 @@ describe('Polyfills', function () {
       var oidx = db.polyfills.polyfills.indexOf(db.polyfills.polyfill.oobs)
       var sidx = db.polyfills.polyfills.indexOf(db.polyfills.polyfill.si)
       assert(oidx < sidx)
+    })
+  })
+
+  describe('Object.setPrototypeOf', function () {
+    it('.filter(Opera 12.14)', function () {
+      var agent = db.agents.parse(opera1214)[0]
+      var protoof = db.polyfills.polyfill.ospo
+      assert(protoof.filter(agent))
     })
   })
 })
