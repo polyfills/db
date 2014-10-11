@@ -11,17 +11,17 @@
   "license": "MIT",
   "repository": "polyfills/db",
   "dependencies": {
-    "semver": "4",
-    "useragent": "2",
+    "flatten": "0",
     "memorizer": "1",
-    "flatten": "0"
+    "semver": "4",
+    "useragent": "2"
   },
   "devDependencies": {
     "autoprefixer-core": "3",
     "es6-arrow-function": "0",
     "es6-class": "0",
     "es6-comprehensions": "0",
-    "es6-computed-properties": "0.0.1",
+    "es6-computed-properties": "0",
     "es6-default-params": "0",
     "es6-destructuring": "0",
     "es6-object-concise": "0",
@@ -33,7 +33,10 @@
     "mocha": "1",
     "postcss": "2",
     "postcss-calc": "2",
-    "postcss-color": "1",
+    "postcss-color-function": "1",
+    "postcss-color-hex-alpha": "1",
+    "postcss-color-hwb": "1",
+    "postcss-color-rebeccapurple": "1",
     "postcss-custom-media": "1",
     "postcss-custom-properties": "0",
     "recast": "0",

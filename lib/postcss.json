@@ -1,0 +1,49 @@
+[
+  {
+    "name": "variables",
+    "module": "postcss-custom-properties",
+    "sources": [
+      "http://caniuse.com/css-variables",
+      "https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables"
+    ],
+    "browsers": {
+      "ff": 31
+    }
+  },
+  {
+    "name": "custom-media",
+    "module": "postcss-custom-media"
+  },
+  {
+    "name": "color",
+    "module": "postcss-color-function"
+  },
+  {
+    "name": "hexalpha",
+    "module": "postcss-color-hex-alpha"
+  },
+  {
+    "name": "hwb",
+    "module": "postcss-color-hwb"
+  },
+  {
+    "name": "rebeccapurple",
+    "module": "postcss-color-rebeccapurple"
+  },
+  {
+    "module": "postcss-calc",
+    "sources": [
+      "http://caniuse.com/calc",
+      "https://developer.mozilla.org/en-US/docs/Web/CSS/calc"
+    ],
+    "browsers": {
+      "ie": 9,
+      "ff": 19,
+      "chrome": 27,
+      "safari": 6,
+      "opera": 13,
+      "android": "4.4",
+      "ios": "6.1.4"
+    }
+  }
+]
