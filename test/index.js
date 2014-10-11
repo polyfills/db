@@ -131,6 +131,12 @@ describe('Features', function () {
 })
 
 describe('Recast', function () {
+  it('should include all modules as development dependencies', function () {
+    db.recast.transforms.forEach(function (transform) {
+      assert(transform.module)
+    })
+  })
+
   describe('Generators', function () {
     it('.filter(Chrome 36)', function () {
       var agent = db.agents.parse(chrome36)[0]
@@ -153,6 +159,12 @@ describe('Recast', function () {
 })
 
 describe('PostCSS', function () {
+  it('should include all modules as development dependencies', function () {
+    db.postcss.transforms.forEach(function (transform) {
+      assert(transform.module)
+    })
+  })
+
   describe('calc()', function () {
     it('.filter(Chrome 36)', function () {
       var agent = db.agents.parse(chrome36)[0]

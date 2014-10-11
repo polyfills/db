@@ -38,6 +38,7 @@
     "postcss-custom-properties": "0",
     "recast": "0",
     "regenerator": "0",
+    "regexpu": "^0.3.0",
     "strip-comments": "0"
   },
   "scripts": {

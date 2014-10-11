@@ -109,5 +109,9 @@
     "browsers": {
       "ff": 34
     }
+  },
+  {
+    "module": "regexpu",
+    "shortName": "rgxu"
   }
 ]
