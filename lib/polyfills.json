@@ -3,6 +3,7 @@
     "name": "es5",
     "url": "/es-shims/es5-shim/master/es5-shim.js",
     "repo": "es-shims/es5-shim",
+    "inclusive": true,
     "features": [],
     "sources": [
       "http://kangax.github.io/compat-table/es5/"
@@ -20,10 +21,53 @@
     "// notes": "first because a lot of polyfills assume an ES5 environment"
   },
   {
+    "name": "es5-sham",
+    "url": "/es-shims/es5-shim/master/es5-sham.js",
+    "repo": "es-shims/es5-shim",
+    "inclusive": true,
+    "features": [],
+    "sources": [
+      "http://kangax.github.io/compat-table/es5/"
+    ],
+    "browsers": {
+      "ie": 9,
+      "ff": 4,
+      "ios": 6,
+      "safari": "5.1.4",
+      "chrome": 19,
+      "opera": "12.10",
+      "android": 4,
+      "default": false
+    }
+  },
+  {
+    "name": "es6",
+    "url": "/paulmillr/es6-shim/master/es6-shim.js",
+    "repo": "paulmillr/es6-shim",
+    "inclusive": true,
+    "features": [],
+    "sources": [
+      "http://kangax.github.io/compat-table/es6/"
+    ],
+    "browsers": {}
+  },
+  {
+    "name": "es6-sham",
+    "url": "/paulmillr/es6-shim/master/es6-sham.js",
+    "repo": "paulmillr/es6-shim",
+    "inclusive": true,
+    "features": [],
+    "sources": [
+      "http://kangax.github.io/compat-table/es6/"
+    ],
+    "browsers": {}
+  },
+  {
     "name": "setimmediate",
     "shortName": "si",
     "url": "/YuzuJS/setImmediate/master/setImmediate.js",
     "repo": "YuzuJS/setImmediate",
+    "inclusive": true,
     "features": [
       "setImmediate()",
       "clearImmediate()"
@@ -81,6 +125,7 @@
     "shortName": "domels",
     "url": "/barberboy/dom-elements/master/lib/dom-elements.js",
     "repo": "barberboy/dom-elements",
+    "inclusive": true,
     "features": [
       "Element.prototype.query()",
       "Element.prototype.queryAll()"
@@ -90,6 +135,7 @@
     "name": "dom4",
     "url": "/webreflection/dom4/master/build/dom4.js",
     "repo": "webreflection/dom4",
+    "inclusive": true,
     "features": [
       "Element.prototype.prepend()",
       "Element.prototype.append()",
@@ -106,6 +152,7 @@
     "shortName": "raf",
     "url": "/darius/requestAnimationFrame/master/requestAnimationFrame.js",
     "repo": "darius/requestAnimationFrame",
+    "inclusive": true,
     "features": [
       "requestAnimationFrame()",
       "cancelAnimationFrame()"
@@ -128,6 +175,7 @@
     "shortName": "obs",
     "url": "/jdarling/Object.observe/master/Object.observe.poly.js",
     "repo": "jdarling/Object.observe",
+    "inclusive": true,
     "features": [
       "Object.observe()"
     ],
@@ -140,6 +188,7 @@
     "shortName": "es",
     "url": "/Yaffle/EventSource/master/eventsource.js",
     "repo": "Yaffle/EventSource",
+    "inclusive": true,
     "features": [
       "new EventSource()"
     ],
@@ -178,6 +227,7 @@
     "shortName": "b64",
     "url": "/davidchambers/Base64.js/master/base64.js",
     "repo": "davidchambers/Base64.js",
+    "inclusive": true,
     "features": [
       "atob()",
       "btoa()"
@@ -196,6 +246,7 @@
     "shortName": "pnow",
     "url": "https://gist.githubusercontent.com/paulirish/5438650/raw/9912fea136c32c58ae086372a2083813d984c6da/performance.now()-polyfill.js",
     "repo": "https://gist.github.com/paulirish/5438650/",
+    "inclusive": true,
     "features": [
       "performance.now()"
     ],
@@ -215,6 +266,7 @@
     "shortName": "mm",
     "url": "/paulirish/matchMedia.js/master/matchMedia.js",
     "repo": "paulirish/matchMedia.js",
+    "inclusive": true,
     "features": [
       "matchMedia()"
     ],
@@ -394,6 +446,7 @@
     "shortName": "reps",
     "url": "/mathiasbynens/RegExp.prototype.search/master/regexp-prototype-search.js",
     "repo": "mathiasbynens/RegExp.prototype.search",
+    "inclusive": true,
     "features": [
       "RegExp.prototype.search()"
     ]
@@ -403,6 +456,7 @@
     "shortName": "repm",
     "url": "/mathiasbynens/RegExp.prototype.match/master/regexp-prototype-match.js",
     "repo": "mathiasbynens/RegExp.prototype.match",
+    "inclusive": true,
     "features": [
       "RegExp.prototype.match()"
     ]
@@ -429,6 +483,7 @@
     "shortName": "pic",
     "url": "/scottjehl/picturefill/master/dist/picturefill.js",
     "repo": "scottjehl/picturefill",
+    "inclusive": true,
     "features": [
       "<picture>"
     ],
