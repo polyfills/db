@@ -82,7 +82,7 @@
   },
   {
     "name": "promise",
-    "url": "http://s3.amazonaws.com/es6-promises/promise-1.0.0.js",
+    "url": "http://s3.amazonaws.com/es6-promises/es6-promise-2.0.0.js",
     "repo": "jakearchibald/es6-promise",
     "features": [
       "new Promise()"
