@@ -383,7 +383,8 @@
       "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/contains"
     ],
     "browsers": {
-      "ff": 18
+      "ff": 18,
+      "chrome": 36
     }
   },
   {
