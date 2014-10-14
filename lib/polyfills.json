@@ -81,6 +81,33 @@
     "// notes": "needs to be before Object.observe() because it has its own polyfill"
   },
   {
+    "name": "promise",
+    "url": "http://s3.amazonaws.com/es6-promises/promise-1.0.0.js",
+    "repo": "jakearchibald/es6-promise",
+    "features": [
+      "new Promise()"
+    ],
+    "sources": [
+      "http://caniuse.com/promises"
+    ],
+    "browsers": {
+      "ff": 29,
+      "chrome": 33,
+      "ios": 8,
+      "safari": 7.1,
+      "opera": 20
+    }
+  },
+  {
+    "name": "fetch",
+    "url": "/github/fetch/master/fetch.js",
+    "repo": "github/fetch",
+    "features": [
+      "window.fetch()"
+    ],
+    "// notes": "requires a Promise implementation"
+  },
+  {
     "name": "classlist",
     "shortName": "clsls",
     "url": "/eligrey/classList.js/master/classList.js",
@@ -202,24 +229,6 @@
       "safari": 5,
       "android": 4.4,
       "opera": 11
-    }
-  },
-  {
-    "name": "promise",
-    "url": "http://s3.amazonaws.com/es6-promises/promise-1.0.0.js",
-    "repo": "jakearchibald/es6-promise",
-    "features": [
-      "new Promise()"
-    ],
-    "sources": [
-      "http://caniuse.com/promises"
-    ],
-    "browsers": {
-      "ff": 29,
-      "chrome": 33,
-      "ios": 8,
-      "safari": 7.1,
-      "opera": 20
     }
   },
   {
