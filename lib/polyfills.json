@@ -102,6 +102,7 @@
     "name": "fetch",
     "url": "/github/fetch/master/fetch.js",
     "repo": "github/fetch",
+    "inclusive": true,
     "features": [
       "window.fetch()"
     ],
