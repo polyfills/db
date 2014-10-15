@@ -6,9 +6,7 @@
       "http://caniuse.com/css-variables",
       "https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables"
     ],
-    "browsers": {
-      "ff": 31
-    }
+    "caniuse": "css-variables"
   },
   {
     "name": "custom-media",
@@ -36,14 +34,6 @@
       "http://caniuse.com/calc",
       "https://developer.mozilla.org/en-US/docs/Web/CSS/calc"
     ],
-    "browsers": {
-      "ie": 9,
-      "ff": 19,
-      "chrome": 27,
-      "safari": 6,
-      "opera": 13,
-      "android": "4.4",
-      "ios": "6.1.4"
-    }
+    "caniuse": "calc"
   }
 ]

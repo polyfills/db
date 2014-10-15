@@ -175,6 +175,10 @@ describe('PostCSS', function () {
     it('.filter(IE8)', function () {
       var agent = db.agents.parse(ie8)[0]
       var calc = db.postcss.transform.calc
+      assert(calc.browsers.safari === '6.1')
+      assert(calc.browsers.ios === '7.0')
+      assert(calc.browsers.ie === '10')
+      console.log(calc.filter.toString())
       assert(calc.filter(agent))
     })
   })
@@ -214,6 +218,20 @@ describe('Polyfills', function () {
       var agent = db.agents.parse(android403)[0]
       var raf = db.polyfills.polyfill.raf
       assert(raf.filter(agent))
+    })
+  })
+
+  describe('EventSource', function () {
+    it('.filter(iOS 5.1)', function () {
+      var agent = db.agents.parse(ios51)[0]
+      var raf = db.polyfills.polyfill.eventsource
+      assert(!raf.filter(agent))
+    })
+
+    it('.filter(IE 8)', function () {
+      var agent = db.agents.parse(ie8)[0]
+      var es5 = db.polyfills.polyfill.eventsource
+      assert(es5.filter(agent))
     })
   })
 

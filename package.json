@@ -11,6 +11,7 @@
   "license": "MIT",
   "repository": "polyfills/db",
   "dependencies": {
+    "caniuse-db": "1",
     "flatten": "0",
     "memorizer": "1",
     "semver": "4",

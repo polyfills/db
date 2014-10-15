@@ -90,13 +90,7 @@
     "sources": [
       "http://caniuse.com/promises"
     ],
-    "browsers": {
-      "ff": 29,
-      "chrome": 33,
-      "ios": 8,
-      "safari": 7.1,
-      "opera": 20
-    }
+    "caniuse": "promises"
   },
   {
     "name": "fetch",
@@ -121,15 +115,7 @@
       null,
       "http://caniuse.com/#feat=classlist,"
     ],
-    "browsers": {
-      "chrome": 24,
-      "ff": 24,
-      "ie": 10,
-      "opera": 15,
-      "safari": 5.1,
-      "ios": 5.1,
-      "android": 3
-    }
+    "caniuse": "classlist"
   },
   {
     "name": "matches",
@@ -143,10 +129,7 @@
       "http://caniuse.com/#feat=matchesselector",
       "https://developer.mozilla.org/en-US/docs/Web/API/Element.matches"
     ],
-    "browsers": {
-      "chrome": 34,
-      "ff": 34
-    }
+    "caniuse": "matchesselector"
   },
   {
     "name": "domelements",
@@ -188,15 +171,7 @@
     "sources": [
       "http://caniuse.com/requestanimationframe"
     ],
-    "browsers": {
-      "ie": 10,
-      "ff": 23,
-      "chrome": 24,
-      "ios": 7,
-      "safari": 6.1,
-      "android": 4.4,
-      "opera": 15
-    }
+    "caniuse": "requestanimationframe"
   },
   {
     "name": "objectobserve",
@@ -223,14 +198,7 @@
     "sources": [
       "http://caniuse.com/eventsource"
     ],
-    "browsers": {
-      "ff": 6,
-      "chrome": 6,
-      "ios": 4,
-      "safari": 5,
-      "android": 4.4,
-      "opera": 11
-    }
+    "caniuse": "eventsource"
   },
   {
     "name": "base64",
@@ -245,11 +213,7 @@
     "sources": [
       "https://developer.mozilla.org/en-US/docs/Web/API/Window.btoa"
     ],
-    "browsers": {
-      "ie": 10,
-      "ff": 1.7,
-      "default": false
-    }
+    "caniuse": "atob-btoa"
   },
   {
     "name": "performancenow",
@@ -283,15 +247,7 @@
     "sources": [
       "https://developer.mozilla.org/en-US/docs/Web/API/Window.matchMedia"
     ],
-    "browsers": {
-      "ie": 10,
-      "ff": 6,
-      "chrome": 9,
-      "ios": 5,
-      "safari": 5.1,
-      "android": 3,
-      "opera": 12.1
-    }
+    "caniuse": "matchmedia"
   },
   {
     "name": "stringfromcodepoint",
@@ -500,6 +456,7 @@
     ],
     "sources": [
       "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture"
-    ]
+    ],
+    "caniuse": "picture"
   }
 ]
