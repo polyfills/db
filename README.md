@@ -23,7 +23,7 @@ Types of polyfills:
 
 ## Help Maintaining
 
-All updates are currently done manually.
+Most updates are currently done manually.
 Please help add polyfills and update the relevant versions.
 Some helpful resources are:
 
