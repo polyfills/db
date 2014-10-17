@@ -21,6 +21,14 @@ Types of polyfills:
 - recast - JS transpilation using [recast](https://github.com/benjamn/recast) and [ecstacy](https://github.com/polyfills/ecstacy)
 - postcss - CSS transpilation using [postcss](https://github.com/postcss/postcss) and [ecstacy](https://github.com/polyfills/ecstacy)
 
+## Testing on Browsers
+
+Of course, we want to actually test each bundle on a browser. 
+Right now, tests are in [paas](https://github.com/polyfills/paas),
+so everytime you add a polyfill, checkout [paas](https://github.com/polyfills/paas) 
+and see if hitting `GET /test.html` works in all your browsers.
+CI testing is coming!
+
 ## Help Maintaining
 
 Most updates are currently done manually.
