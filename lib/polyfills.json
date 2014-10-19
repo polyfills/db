@@ -456,7 +456,7 @@
   },
   {
     "name": "intl",
-    "url": "/andyearnshaw/Intl.js/master/dist/Intl.complete.js",
+    "url": "/andyearnshaw/Intl.js/master/dist/Intl.js",
     "repo": "andyearnshaw/Intl.js",
     "inclusive": true,
     "features": [
