@@ -225,15 +225,10 @@
       "performance.now()"
     ],
     "sources": [
-      "https://developer.mozilla.org/en-US/docs/Web/API/Performance.now()"
+      "https://developer.mozilla.org/en-US/docs/Web/API/Performance.now()",
+      "http://caniuse.com/#feat=high-resolution-time"
     ],
-    "browsers": {
-      "ie": 10,
-      "ff": 15,
-      "chrome": 24,
-      "android": 4,
-      "opera": 15
-    }
+    "caniuse": "high-resolution-time"
   },
   {
     "name": "matchmedia",
@@ -458,5 +453,23 @@
       "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture"
     ],
     "caniuse": "picture"
+  },
+  {
+    "name": "intl",
+    "url": "/andyearnshaw/Intl.js/master/dist/Intl.complete.js",
+    "repo": "andyearnshaw/Intl.js",
+    "inclusive": true,
+    "features": [
+      "Intl"
+    ],
+    "sources": [
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl"
+    ],
+    "browsers": {
+      "chrome": 24,
+      "ff": 29,
+      "ie": 11,
+      "opera": 15
+    }
   }
 ]
