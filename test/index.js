@@ -1,5 +1,6 @@
 
 var strip = require('strip-comments')
+var request = require('request')
 var assert = require('assert')
 var ua = require('useragent')
 var fs = require('fs')
@@ -178,7 +179,6 @@ describe('PostCSS', function () {
       assert(calc.browsers.safari === '6.1')
       assert(calc.browsers.ios === '7.0')
       assert(calc.browsers.ie === '10')
-      console.log(calc.filter.toString())
       assert(calc.filter(agent))
     })
   })
@@ -199,6 +199,18 @@ describe('PostCSS', function () {
 })
 
 describe('Polyfills', function () {
+  describe('URLs should 200', function () {
+    db.polyfills.polyfills.forEach(function (polyfill) {
+      it(polyfill.name, function (done) {
+        request(polyfill.url, function (err, res) {
+          if (err) throw err
+          assert.equal(res.statusCode, 200)
+          done()
+        })
+      })
+    })
+  })
+
   describe('ES5', function () {
     it('.filter(IE 8)', function () {
       var agent = db.agents.parse(ie8)[0]

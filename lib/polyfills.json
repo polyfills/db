@@ -467,5 +467,19 @@
       "ie": 11,
       "opera": 15
     }
+  },
+  {
+    "name": "indexdb",
+    "shortName": "idb",
+    "url": "/axemclion/IndexedDBShim/master/dist/IndexedDBShim.js",
+    "repo": "axemclion/IndexedDBShim",
+    "inclusive": true,
+    "caniuse": "indexeddb",
+    "features": [
+      "indexedDB"
+    ],
+    "sources": [
+      "http://caniuse.com/#feat=indexeddb"
+    ]
   }
 ]

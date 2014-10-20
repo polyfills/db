@@ -43,6 +43,7 @@
     "recast": "0",
     "regenerator": "0",
     "regexpu": "^0.3.0",
+    "request": "^2.45.0",
     "strip-comments": "0"
   },
   "scripts": {
