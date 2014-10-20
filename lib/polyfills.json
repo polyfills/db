@@ -45,22 +45,18 @@
     "url": "/paulmillr/es6-shim/master/es6-shim.js",
     "repo": "paulmillr/es6-shim",
     "inclusive": true,
-    "features": [],
     "sources": [
       "http://kangax.github.io/compat-table/es6/"
-    ],
-    "browsers": {}
+    ]
   },
   {
     "name": "es6-sham",
     "url": "/paulmillr/es6-shim/master/es6-sham.js",
     "repo": "paulmillr/es6-shim",
     "inclusive": true,
-    "features": [],
     "sources": [
       "http://kangax.github.io/compat-table/es6/"
-    ],
-    "browsers": {}
+    ]
   },
   {
     "name": "setimmediate",
@@ -84,13 +80,13 @@
     "name": "promise",
     "url": "http://s3.amazonaws.com/es6-promises/es6-promise-2.0.0.js",
     "repo": "jakearchibald/es6-promise",
+    "caniuse": "promises",
     "features": [
       "new Promise()"
     ],
     "sources": [
       "http://caniuse.com/promises"
-    ],
-    "caniuse": "promises"
+    ]
   },
   {
     "name": "fetch",
@@ -107,6 +103,7 @@
     "shortName": "clsls",
     "url": "/eligrey/classList.js/master/classList.js",
     "repo": "eligrey/classList.js",
+    "caniuse": "classlist",
     "features": [
       "Element.prototype.classList"
     ],
@@ -114,22 +111,21 @@
       "https://developer.mozilla.org/en-US/docs/Web/API/Element.classList",
       null,
       "http://caniuse.com/#feat=classlist,"
-    ],
-    "caniuse": "classlist"
+    ]
   },
   {
     "name": "matches",
     "shortName": "mtchs",
     "url": "https://gist.githubusercontent.com/jonathantneal/3062955/raw/ad9d969c4e55581edbbb293c74135a751f586664/matchesSelector.polyfill.js",
     "repo": "https://gist.github.com/jonathantneal/3062955",
+    "caniuse": "matchesselector",
     "features": [
       "Element.prototype.matches()"
     ],
     "sources": [
       "http://caniuse.com/#feat=matchesselector",
       "https://developer.mozilla.org/en-US/docs/Web/API/Element.matches"
-    ],
-    "caniuse": "matchesselector"
+    ]
   },
   {
     "name": "domelements",
@@ -164,14 +160,14 @@
     "url": "/darius/requestAnimationFrame/master/requestAnimationFrame.js",
     "repo": "darius/requestAnimationFrame",
     "inclusive": true,
+    "caniuse": "requestanimationframe",
     "features": [
       "requestAnimationFrame()",
       "cancelAnimationFrame()"
     ],
     "sources": [
       "http://caniuse.com/requestanimationframe"
-    ],
-    "caniuse": "requestanimationframe"
+    ]
   },
   {
     "name": "objectobserve",
@@ -192,13 +188,13 @@
     "url": "/Yaffle/EventSource/master/eventsource.js",
     "repo": "Yaffle/EventSource",
     "inclusive": true,
+    "caniuse": "eventsource",
     "features": [
       "new EventSource()"
     ],
     "sources": [
       "http://caniuse.com/eventsource"
-    ],
-    "caniuse": "eventsource"
+    ]
   },
   {
     "name": "base64",
@@ -206,14 +202,14 @@
     "url": "/davidchambers/Base64.js/master/base64.js",
     "repo": "davidchambers/Base64.js",
     "inclusive": true,
+    "caniuse": "atob-btoa",
     "features": [
       "atob()",
       "btoa()"
     ],
     "sources": [
       "https://developer.mozilla.org/en-US/docs/Web/API/Window.btoa"
-    ],
-    "caniuse": "atob-btoa"
+    ]
   },
   {
     "name": "performancenow",
@@ -221,14 +217,14 @@
     "url": "https://gist.githubusercontent.com/paulirish/5438650/raw/9912fea136c32c58ae086372a2083813d984c6da/performance.now()-polyfill.js",
     "repo": "https://gist.github.com/paulirish/5438650/",
     "inclusive": true,
+    "caniuse": "high-resolution-time",
     "features": [
       "performance.now()"
     ],
     "sources": [
       "https://developer.mozilla.org/en-US/docs/Web/API/Performance.now()",
       "http://caniuse.com/#feat=high-resolution-time"
-    ],
-    "caniuse": "high-resolution-time"
+    ]
   },
   {
     "name": "matchmedia",
@@ -236,13 +232,13 @@
     "url": "/paulirish/matchMedia.js/master/matchMedia.js",
     "repo": "paulirish/matchMedia.js",
     "inclusive": true,
+    "caniuse": "matchmedia",
     "features": [
       "matchMedia()"
     ],
     "sources": [
       "https://developer.mozilla.org/en-US/docs/Web/API/Window.matchMedia"
-    ],
-    "caniuse": "matchmedia"
+    ]
   },
   {
     "name": "stringfromcodepoint",
@@ -446,13 +442,13 @@
     "url": "/scottjehl/picturefill/master/dist/picturefill.js",
     "repo": "scottjehl/picturefill",
     "inclusive": true,
+    "caniuse": "picture",
     "features": [
       "<picture>"
     ],
     "sources": [
       "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture"
-    ],
-    "caniuse": "picture"
+    ]
   },
   {
     "name": "intl",
