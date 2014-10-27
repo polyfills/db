@@ -71,16 +71,6 @@
     }
   },
   {
-    "module": "es6-comprehensions",
-    "shortName": "cmprhsns",
-    "sources": [
-      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions"
-    ],
-    "browsers": {
-      "ff": 30
-    }
-  },
-  {
     "module": "es6-object-short",
     "shortName": "obj-shrt",
     "sources": [
