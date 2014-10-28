@@ -428,12 +428,12 @@
       "Object.setPrototypeOf()"
     ],
     "sources": [
-      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#Browser_compatibility"
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#Browser_compatibility",
+      "http://kangax.github.io/compat-table/es6/"
     ],
     "browsers": {
       "ff": 31,
-      "chrome": 34,
-      "opera": true
+      "chrome": 34
     }
   },
   {

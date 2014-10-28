@@ -17,6 +17,7 @@ var safari7 = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.77
 var opera1214 = 'Opera/9.80 (Windows NT 6.0) Presto/2.12.388 Version/12.14'
 var ios81 = 'Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B411 Safari/600.1.4'
 var ios8 = 'Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B411 Safari/600.1.4'
+var ie11 = 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko'
 
 describe('Agents', function () {
   describe('.parse()', function () {
@@ -232,6 +233,12 @@ describe('Polyfills', function () {
 
     it('.filter(IE 8)', function () {
       var agent = db.agents.parse(ie8)[0]
+      var es5 = db.polyfills.polyfill.eventsource
+      assert(es5.filter(agent))
+    })
+
+    it('.filter(IE 11)', function () {
+      var agent = db.agents.parse(ie11)[0]
       var es5 = db.polyfills.polyfill.eventsource
       assert(es5.filter(agent))
     })
