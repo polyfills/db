@@ -15,6 +15,8 @@ var android403 = 'Mozilla/5.0 (Linux; U; Android 4.0.3; ko-kr; LG-L160L Build/IM
 var ff31 = 'Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0'
 var safari7 = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.77.4 (KHTML, like Gecko) Version/7.0.5 Safari/537.77.4'
 var opera1214 = 'Opera/9.80 (Windows NT 6.0) Presto/2.12.388 Version/12.14'
+var ios81 = 'Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B411 Safari/600.1.4'
+var ios8 = 'Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B411 Safari/600.1.4'
 
 describe('Agents', function () {
   describe('.parse()', function () {
@@ -199,18 +201,6 @@ describe('PostCSS', function () {
 })
 
 describe('Polyfills', function () {
-  describe('URLs should 200', function () {
-    db.polyfills.polyfills.forEach(function (polyfill) {
-      it(polyfill.name, function (done) {
-        request(polyfill.url, function (err, res) {
-          if (err) throw err
-          assert.equal(res.statusCode, 200)
-          done()
-        })
-      })
-    })
-  })
-
   describe('ES5', function () {
     it('.filter(IE 8)', function () {
       var agent = db.agents.parse(ie8)[0]
@@ -260,6 +250,32 @@ describe('Polyfills', function () {
       var agent = db.agents.parse(opera1214)[0]
       var protoof = db.polyfills.polyfill.ospo
       assert(protoof.filter(agent))
+    })
+  })
+
+  describe('performance.now()', function () {
+    var polyfill = db.polyfills.polyfill.pnow
+
+    it('.filter(ios8)', function () {
+      var agent = db.agents.parse(ios8)[0]
+      assert(polyfill.filter(agent))
+    })
+
+    it('.filter(ios8.1)', function () {
+      var agent = db.agents.parse(ios81)[0]
+      assert(polyfill.filter(agent))
+    })
+  })
+
+  describe('URLs should 200', function () {
+    db.polyfills.polyfills.forEach(function (polyfill) {
+      it(polyfill.name, function (done) {
+        request(polyfill.url, function (err, res) {
+          if (err) throw err
+          assert.equal(res.statusCode, 200)
+          done()
+        })
+      })
     })
   })
 })
