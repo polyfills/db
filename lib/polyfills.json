@@ -319,19 +319,17 @@
     }
   },
   {
-    "name": "stringprototypecontains",
+    "name": "stringprototypeincludes",
     "shortName": "spc",
-    "url": "/mathiasbynens/String.prototype.contains/master/contains.js",
-    "repo": "mathiasbynens/String.prototype.contains",
+    "url": "/mathiasbynens/String.prototype.includes/master/includes.js",
+    "repo": "mathiasbynens/String.prototype.includes",
     "features": [
-      "String.prototype.contains()"
+      "String.prototype.includes()"
     ],
     "sources": [
-      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/contains"
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes"
     ],
     "browsers": {
-      "ff": 18,
-      "chrome": 36
     }
   },
   {
