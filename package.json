@@ -30,6 +30,7 @@
     "es6-rest-params": "0",
     "es6-spread": "0",
     "es6-templates": "0",
+    "es7-async-fn": "1",
     "istanbul": "0",
     "mocha": "2",
     "postcss": "3",

@@ -160,6 +160,14 @@ describe('Recast', function () {
       new Function(runtime)
     })
   })
+
+  describe('Async Functions', function () {
+    it('.runtime', function () {
+      var asyncFn = db.recast.transform.async
+      var runtime = asyncFn.runtime
+      new Function(runtime)
+    })
+  })
 })
 
 describe('PostCSS', function () {
