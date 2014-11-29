@@ -108,8 +108,8 @@
     "shortName": "rgxu"
   },
   {
+    "name": "async",
     "module": "es7-async-fn",
-    "shortName": "async",
     "runtime": "es7-async-fn/runtime.js",
     "sources": []
   }
