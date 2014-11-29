@@ -23,10 +23,13 @@
     "shortName": "gens",
     "runtime": "regenerator/runtime.js",
     "sources": [
-      "http://www.chromestatus.com/features/4959347197083648#generator"
+      "http://www.chromestatus.com/features/4959347197083648#generator",
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*"
     ],
     "browsers": {
-      "ff": 26
+      "ff": 26,
+      "chrome": 39,
+      "opera": 26
     }
   },
   {
