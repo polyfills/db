@@ -23,9 +23,9 @@ Types of polyfills:
 
 ## Testing on Browsers
 
-Of course, we want to actually test each bundle on a browser. 
+Of course, we want to actually test each bundle on a browser.
 Right now, tests are in [paas](https://github.com/polyfills/paas),
-so everytime you add a polyfill, checkout [paas](https://github.com/polyfills/paas) 
+so everytime you add a polyfill, checkout [paas](https://github.com/polyfills/paas)
 and see if hitting `GET /test.html` works in all your browsers.
 CI testing is coming!
 
@@ -41,6 +41,11 @@ Some helpful resources are:
 - [ES Compatibility Table](http://kangax.github.io/compat-table/es6/)
 - [esnext](https://github.com/esnext/esnext) and its [organization](https://github.com/esnext)
 - [cssnext](https://github.com/cssnext/cssnext) and the [postcss organization](https://github.com/postcss)
+
+## Notes
+
+`regenerator` includes `es7-async-fn`. If you use `regenerator`,
+be sure to not use `es7-async-fn`, or at least the runtime.
 
 [npm-image]: https://img.shields.io/npm/v/polyfills-db.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/polyfills-db
