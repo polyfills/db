@@ -119,6 +119,18 @@ describe('Agents', function () {
       }]
       assert.deepEqual(transforms, db.agents.filter(transforms, agents))
     })
+
+    it('should remove supersets', function () {
+      var transforms = db.agents.filter(db.recast.transforms, [{
+        family: 'ie',
+        major: 8
+      }])
+      var names = transforms.map(function (transform) {
+        return transform.name
+      })
+      assert(~names.indexOf('generators'))
+      assert(!~names.indexOf('async'))
+    })
   })
 })
 
@@ -164,6 +176,7 @@ describe('Recast', function () {
   describe('Async Functions', function () {
     it('.runtime', function () {
       var asyncFn = db.recast.transform.async
+      assert.deepEqual(asyncFn.supersets, ['generators'])
       var runtime = asyncFn.runtime
       new Function(runtime)
     })
