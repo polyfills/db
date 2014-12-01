@@ -86,6 +86,9 @@
     ],
     "sources": [
       "http://caniuse.com/promises"
+    ],
+    "supersets": [
+      "es6"
     ]
   },
   {
@@ -111,6 +114,9 @@
       "https://developer.mozilla.org/en-US/docs/Web/API/Element.classList",
       null,
       "http://caniuse.com/#feat=classlist,"
+    ],
+    "supersets": [
+      "dom4"
     ]
   },
   {
@@ -125,6 +131,9 @@
     "sources": [
       "http://caniuse.com/#feat=matchesselector",
       "https://developer.mozilla.org/en-US/docs/Web/API/Element.matches"
+    ],
+    "supersets": [
+      "dom4"
     ]
   },
   {
@@ -253,7 +262,10 @@
     ],
     "browsers": {
       "ff": 29
-    }
+    },
+    "supersets": [
+      "es6"
+    ]
   },
   {
     "name": "stringprototypecodepointat",
@@ -268,7 +280,10 @@
     ],
     "browsers": {
       "ff": 29
-    }
+    },
+    "supersets": [
+      "es6"
+    ]
   },
   {
     "name": "stringprototyperepeat",
@@ -284,7 +299,10 @@
     "browsers": {
       "ff": 24,
       "chrome": 36
-    }
+    },
+    "supersets": [
+      "es6"
+    ]
   },
   {
     "name": "stringprototypestartswith",
@@ -300,7 +318,10 @@
     "browsers": {
       "ff": 17,
       "chrome": 36
-    }
+    },
+    "supersets": [
+      "es6"
+    ]
   },
   {
     "name": "stringprototypeendswith",
@@ -316,7 +337,10 @@
     "browsers": {
       "ff": 17,
       "chrome": 36
-    }
+    },
+    "supersets": [
+      "es6"
+    ]
   },
   {
     "name": "stringprototypeincludes",
@@ -330,7 +354,10 @@
       "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes"
     ],
     "browsers": {
-    }
+    },
+    "supersets": [
+      "es6"
+    ]
   },
   {
     "name": "arrayfrom",
@@ -345,7 +372,10 @@
     ],
     "browsers": {
       "ff": 32
-    }
+    },
+    "supersets": [
+      "es6"
+    ]
   },
   {
     "name": "arrayof",
@@ -360,7 +390,10 @@
     ],
     "browsers": {
       "ff": 25
-    }
+    },
+    "supersets": [
+      "es6"
+    ]
   },
   {
     "name": "arrayprototypefind",
@@ -378,7 +411,10 @@
       "ff": 25,
       "safari": 7.1,
       "ios": 8
-    }
+    },
+    "supersets": [
+      "es6"
+    ]
   },
   {
     "name": "arrayprototypefindindex",
@@ -395,7 +431,10 @@
       "ff": 25,
       "safari": 7.1,
       "ios": 8
-    }
+    },
+    "supersets": [
+      "es6"
+    ]
   },
   {
     "name": "regexpprototypesearch",
@@ -432,7 +471,10 @@
     "browsers": {
       "ff": 31,
       "chrome": 34
-    }
+    },
+    "supersets": [
+      "es6"
+    ]
   },
   {
     "name": "picture",

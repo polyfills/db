@@ -111,6 +111,11 @@
     "name": "async",
     "module": "es7-async-fn",
     "runtime": "es7-async-fn/runtime.js",
-    "sources": []
+    "sources": [
+
+    ],
+    "supersets": [
+      "generators"
+    ]
   }
 ]
