@@ -254,9 +254,9 @@ describe('Polyfills', function () {
 
   describe('objectobserve', function () {
     it('above setimmediate', function () {
-      var oidx = db.polyfills.polyfills.indexOf(db.polyfills.polyfill.oobs)
+      var oidx = db.polyfills.polyfills.indexOf(db.polyfills.polyfill.obs)
       var sidx = db.polyfills.polyfills.indexOf(db.polyfills.polyfill.si)
-      assert(oidx < sidx)
+      assert(~oidx && ~sidx && oidx < sidx)
     })
   })
 
