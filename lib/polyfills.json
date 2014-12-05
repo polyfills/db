@@ -164,6 +164,7 @@
       "Element.prototype.replace()",
       "Element.prototype.remove()",
       "Element.prototype.matches()",
+      "Element.prototype.closest()",
       "Element.prototype.classList"
     ]
   },
