@@ -475,23 +475,6 @@
     ]
   },
   {
-    "name": "intl",
-    "url": "/andyearnshaw/Intl.js/master/dist/Intl.js",
-    "repo": "andyearnshaw/Intl.js",
-    "features": [
-      "Intl"
-    ],
-    "sources": [
-      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl"
-    ],
-    "browsers": {
-      "chrome": 24,
-      "ff": 29,
-      "ie": 11,
-      "opera": 15
-    }
-  },
-  {
     "name": "indexdb",
     "shortName": "idb",
     "url": "/axemclion/IndexedDBShim/master/dist/IndexedDBShim.js",
