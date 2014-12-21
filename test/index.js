@@ -22,46 +22,23 @@ var ie11 = 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko'
 describe('Agents', function () {
   describe('.parse()', function () {
     it('should support falsey', function () {
-      var agents = db.agents.parse(null)
-      assert.equal(1, agents.length)
-      var agent = agents.shift()
+      var agent = db.agents.parse(null)
       assert(/unknown/i.test(agent.family))
     })
 
     it('useragent strings', function () {
-      var agents = db.agents.parse(chrome36)
-      assert.equal(1, agents.length)
-      var agent = agents.shift()
+      var agent = db.agents.parse(chrome36)
       assert(agent.family.match(/\bchrome\b/i))
       assert.equal('36', agent.major)
     })
 
     it('objects', function () {
-      var agents = db.agents.parse({
+      var agent = db.agents.parse({
         family: 'chrome',
         major: 36
       })
-      assert.equal(1, agents.length)
-      var agent = agents.shift()
       assert(agent.family.match(/\bchrome\b/i))
       assert.equal('36', agent.major)
-    })
-
-    it('arrays', function () {
-      var agents = db.agents.parse([
-        chrome36,
-        {
-          family: 'chrome',
-          major: 26
-        }
-      ])
-      assert.equal(2, agents.length)
-      var agent = agents.shift()
-      assert(agent.family.match(/\bchrome\b/i))
-      assert.equal('36', agent.major)
-      var agent = agents.shift()
-      assert(agent.family.match(/\bchrome\b/i))
-      assert.equal(26, agent.major)
     })
   })
 
@@ -101,23 +78,20 @@ describe('Agents', function () {
   describe('.filter()', function () {
     it('should pass if any agents satisfy', function () {
       var transforms = [db.recast.transform.generators]
-      var agents = [{
+      var agent = [{
         family: 'firefox',
         major: 27 // after generators
-      }, {
-        family: 'firefox',
-        major: 25 // before generators
       }]
-      assert(db.agents.filter(transforms, agents))
+      assert(db.agents.filter(transforms, agent))
     })
 
     it('should include any transforms where .filter does not exist', function () {
       var transforms = [{}]
-      var agents = [{
+      var agent = [{
         family: 'firefox',
         major: 27
       }]
-      assert.deepEqual(transforms, db.agents.filter(transforms, agents))
+      assert.deepEqual(transforms, db.agents.filter(transforms, agent))
     })
 
     it('should remove supersets', function () {
@@ -155,13 +129,13 @@ describe('Recast', function () {
 
   describe('Generators', function () {
     it('.filter(Chrome 36)', function () {
-      var agent = db.agents.parse(chrome36)[0]
+      var agent = db.agents.parse(chrome36)
       var regenerator = db.recast.transform.generators
       assert(regenerator.filter(agent))
     })
 
     it('.filter(Firefox 31)', function () {
-      var agent = db.agents.parse(ff31)[0]
+      var agent = db.agents.parse(ff31)
       var regenerator = db.recast.transform.generators
       assert(!regenerator.filter(agent))
     })
@@ -192,13 +166,13 @@ describe('PostCSS', function () {
 
   describe('calc()', function () {
     it('.filter(Chrome 36)', function () {
-      var agent = db.agents.parse(chrome36)[0]
+      var agent = db.agents.parse(chrome36)
       var calc = db.postcss.transform.calc
       assert(!calc.filter(agent))
     })
 
     it('.filter(IE8)', function () {
-      var agent = db.agents.parse(ie8)[0]
+      var agent = db.agents.parse(ie8)
       var calc = db.postcss.transform.calc
       assert(calc.browsers.safari === '6.1')
       assert(calc.browsers.ios === '7.0')
@@ -209,13 +183,13 @@ describe('PostCSS', function () {
 
   describe('var()', function () {
     it('.filter(Firefox 31)', function () {
-      var agent = db.agents.parse(ff31)[0]
+      var agent = db.agents.parse(ff31)
       var vars = db.postcss.transform.variables
       assert(!vars.filter(agent))
     })
 
     it('.filter(Chrome 36)', function () {
-      var agent = db.agents.parse(chrome36)[0]
+      var agent = db.agents.parse(chrome36)
       var vars = db.postcss.transform.variables
       assert(vars.filter(agent))
     })
@@ -225,7 +199,7 @@ describe('PostCSS', function () {
 describe('Polyfills', function () {
   describe('ES5', function () {
     it('.filter(IE 8)', function () {
-      var agent = db.agents.parse(ie8)[0]
+      var agent = db.agents.parse(ie8)
       var es5 = db.polyfills.polyfill.es5
       assert(es5.filter(agent))
     })
@@ -233,13 +207,13 @@ describe('Polyfills', function () {
 
   describe('requestAnimationFrame', function () {
     it('.filter(iOS 5.1)', function () {
-      var agent = db.agents.parse(ios51)[0]
+      var agent = db.agents.parse(ios51)
       var raf = db.polyfills.polyfill.raf
       assert(raf.filter(agent))
     })
 
     it('.filter(Android 4.0.3)', function () {
-      var agent = db.agents.parse(android403)[0]
+      var agent = db.agents.parse(android403)
       var raf = db.polyfills.polyfill.raf
       assert(raf.filter(agent))
     })
@@ -247,19 +221,19 @@ describe('Polyfills', function () {
 
   describe('EventSource', function () {
     it('.filter(iOS 5.1)', function () {
-      var agent = db.agents.parse(ios51)[0]
+      var agent = db.agents.parse(ios51)
       var raf = db.polyfills.polyfill.eventsource
       assert(!raf.filter(agent))
     })
 
     it('.filter(IE 8)', function () {
-      var agent = db.agents.parse(ie8)[0]
+      var agent = db.agents.parse(ie8)
       var es5 = db.polyfills.polyfill.eventsource
       assert(es5.filter(agent))
     })
 
     it('.filter(IE 11)', function () {
-      var agent = db.agents.parse(ie11)[0]
+      var agent = db.agents.parse(ie11)
       var es5 = db.polyfills.polyfill.eventsource
       assert(es5.filter(agent))
     })
@@ -275,7 +249,7 @@ describe('Polyfills', function () {
 
   describe('Object.setPrototypeOf', function () {
     it('.filter(Opera 12.14)', function () {
-      var agent = db.agents.parse(opera1214)[0]
+      var agent = db.agents.parse(opera1214)
       var protoof = db.polyfills.polyfill.ospo
       assert(protoof.filter(agent))
     })
@@ -285,12 +259,12 @@ describe('Polyfills', function () {
     var polyfill = db.polyfills.polyfill.pnow
 
     it('.filter(ios8)', function () {
-      var agent = db.agents.parse(ios8)[0]
+      var agent = db.agents.parse(ios8)
       assert(polyfill.filter(agent))
     })
 
     it('.filter(ios8.1)', function () {
-      var agent = db.agents.parse(ios81)[0]
+      var agent = db.agents.parse(ios81)
       assert(polyfill.filter(agent))
     })
   })

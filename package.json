@@ -13,7 +13,6 @@
   "dependencies": {
     "caniuse-db": "1",
     "debug": "*",
-    "flatten": "0",
     "memorizer": "1",
     "semver": "4",
     "useragent": "2"
