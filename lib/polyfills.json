@@ -11,9 +11,9 @@
       "ie": 9,
       "ff": 4,
       "ios": 6,
-      "safari": "5.1.4",
+      "safari": ">= 5.1.4",
       "chrome": 19,
-      "opera": "12.10",
+      "opera": ">= 12.10",
       "android": 4,
       "default": false
     },
@@ -31,9 +31,9 @@
       "ie": 9,
       "ff": 4,
       "ios": 6,
-      "safari": "5.1.4",
+      "safari": ">= 5.1.4",
       "chrome": 19,
-      "opera": "12.10",
+      "opera": ">= 12.10",
       "android": 4,
       "default": false
     }

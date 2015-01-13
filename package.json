@@ -11,11 +11,8 @@
   "license": "MIT",
   "repository": "polyfills/db",
   "dependencies": {
-    "caniuse-db": "1",
-    "debug": "*",
     "memorizer": "1",
-    "semver": "4",
-    "useragent": "2"
+    "polyfill-ua": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer-core": "4",
