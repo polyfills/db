@@ -161,7 +161,7 @@
       "Element.prototype.append()",
       "Element.prototype.before()",
       "Element.prototype.after()",
-      "Element.prototype.replace()",
+      "Element.prototype.replaceWith()",
       "Element.prototype.remove()",
       "Element.prototype.matches()",
       "Element.prototype.closest()",
@@ -248,6 +248,7 @@
       "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint"
     ],
     "browsers": {
+      "chrome": 41,
       "ff": 29
     },
     "supersets": [
@@ -266,6 +267,7 @@
       "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt"
     ],
     "browsers": {
+      "chrome": 41,
       "ff": 29
     },
     "supersets": [
@@ -285,7 +287,7 @@
     ],
     "browsers": {
       "ff": 24,
-      "chrome": 36
+      "chrome": 41
     },
     "supersets": [
       "es6"
@@ -304,7 +306,7 @@
     ],
     "browsers": {
       "ff": 17,
-      "chrome": 36
+      "chrome": 41
     },
     "supersets": [
       "es6"
@@ -323,7 +325,7 @@
     ],
     "browsers": {
       "ff": 17,
-      "chrome": 36
+      "chrome": 41
     },
     "supersets": [
       "es6"
@@ -341,6 +343,7 @@
       "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes"
     ],
     "browsers": {
+      "chrome": 41
     },
     "supersets": [
       "es6"
@@ -455,7 +458,8 @@
     ],
     "browsers": {
       "ff": 31,
-      "chrome": 34
+      "chrome": 34,
+      "ie": 11
     },
     "supersets": [
       "es6"
