@@ -35,5 +35,18 @@
       "https://developer.mozilla.org/en-US/docs/Web/CSS/calc"
     ],
     "caniuse": "calc"
+  },
+  {
+    "name": "gray",
+    "module": "postcss-color-gray"
+  },
+  {
+    "module": "postcss-media-minmax"
+  },
+  {
+    "module": "postcss-custom-selectors"
+  },
+  {
+    "module": "postcss-font-variant"
   }
 ]

@@ -12,10 +12,10 @@
   "repository": "polyfills/db",
   "dependencies": {
     "memorizer": "1",
-    "polyfill-ua": "^1.0.0"
+    "polyfill-ua": "1"
   },
   "devDependencies": {
-    "autoprefixer-core": "4",
+    "autoprefixer-core": "5",
     "es6-arrow-function": "0",
     "es6-class": "0",
     "es6-computed-properties": "0",
@@ -29,14 +29,18 @@
     "es7-async-fn": "1",
     "istanbul": "0",
     "mocha": "2",
-    "postcss": "3",
+    "postcss": "4",
     "postcss-calc": "3",
     "postcss-color-function": "1",
+    "postcss-color-gray": "1",
     "postcss-color-hex-alpha": "1",
     "postcss-color-hwb": "1",
     "postcss-color-rebeccapurple": "1",
     "postcss-custom-media": "1",
-    "postcss-custom-properties": "2",
+    "postcss-custom-properties": "3",
+    "postcss-custom-selectors": "1",
+    "postcss-font-variant": "1",
+    "postcss-media-minmax": "1",
     "recast": "0",
     "regenerator": "0",
     "regexpu": "^0.3.0",
