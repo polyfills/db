@@ -11,46 +11,20 @@
   "license": "MIT",
   "repository": "polyfills/db",
   "dependencies": {
-    "memorizer": "1",
-    "polyfill-ua": "1"
+    "polyfills-feature": "1"
   },
   "devDependencies": {
-    "autoprefixer-core": "5",
-    "es6-arrow-function": "0",
-    "es6-class": "0",
-    "es6-computed-properties": "0",
-    "es6-default-params": "0",
-    "es6-destructuring": "0",
-    "es6-object-concise": "0",
-    "es6-object-short": "0",
-    "es6-rest-params": "0",
-    "es6-spread": "0",
-    "es6-templates": "0",
-    "es7-async-fn": "1",
     "istanbul": "0",
     "mocha": "2",
-    "postcss": "4",
-    "postcss-calc": "4",
-    "postcss-color-function": "1",
-    "postcss-color-gray": "2",
-    "postcss-color-hex-alpha": "1",
-    "postcss-color-hwb": "1",
-    "postcss-color-rebeccapurple": "1",
-    "postcss-custom-media": "3",
-    "postcss-custom-properties": "3",
-    "postcss-custom-selectors": "1",
-    "postcss-font-variant": "1",
-    "postcss-media-minmax": "1",
-    "recast": "0",
-    "regenerator": "0",
-    "regexpu": "1",
+    "polyfill-ua": "^1.0.1",
     "request": "^2.45.0",
-    "strip-comments": "0"
+    "standardberry": "*"
   },
   "scripts": {
-    "test": "mocha --reporter spec --bail --timeout 10s",
+    "lint": "standardberry lib/*.js",
+    "test": "mocha --bail --timeout 10s",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --timeout 10s",
-    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot --timeout 10s"
+    "test-travis": "npm run lint && istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot --timeout 10s"
   },
   "keywords": [
     "database",
@@ -59,7 +33,7 @@
     "features",
     "detects"
   ],
-  "main": "lib",
+  "main": "lib/polyfills.js",
   "files": [
     "lib"
   ]

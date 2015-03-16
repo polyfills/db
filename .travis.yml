@@ -1,6 +1,6 @@
 node_js:
-- "0.10"
-- "0.11"
+- "iojs"
+sudo: false
 language: node_js
 script: "npm run-script test-travis"
 before_install: "npm update -g npm"
