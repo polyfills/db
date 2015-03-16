@@ -427,7 +427,7 @@
     ]
   },
   {
-    "name": "indexdb",
+    "name": "indexeddb",
     "shortName": "idb",
     "url": "/axemclion/IndexedDBShim/master/dist/IndexedDBShim.js",
     "repo": "axemclion/IndexedDBShim",
