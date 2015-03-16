@@ -64,7 +64,8 @@
     ],
     "sources": [
       "http://kangax.github.io/compat-table/es7/"
-    ]
+    ],
+    "caniuse": "object-observe"
   },
   {
     "name": "setimmediate",
@@ -105,6 +106,7 @@
     "features": [
       "window.fetch()"
     ],
+    "caniuse": "fetch",
     "// notes": "requires a Promise implementation"
   },
   {
