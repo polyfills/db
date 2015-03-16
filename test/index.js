@@ -19,14 +19,6 @@ const ios8 = 'Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/
 const ie11 = 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko'
 
 describe('Polyfills', function () {
-  describe('ES5', function () {
-    it('.filter(IE 8)', function () {
-      let agent = ua.parse(ie8)
-      let es5 = db.polyfill.es5
-      assert(es5.filter(agent))
-    })
-  })
-
   describe('requestAnimationFrame', function () {
     it('.filter(iOS 5.1)', function () {
       let agent = ua.parse(ios51)
@@ -46,18 +38,6 @@ describe('Polyfills', function () {
       let agent = ua.parse(ios51)
       let raf = db.polyfill.eventsource
       assert(!raf.filter(agent))
-    })
-
-    it('.filter(IE 8)', function () {
-      let agent = ua.parse(ie8)
-      let es5 = db.polyfill.eventsource
-      assert(es5.filter(agent))
-    })
-
-    it('.filter(IE 11)', function () {
-      let agent = ua.parse(ie11)
-      let es5 = db.polyfill.eventsource
-      assert(es5.filter(agent))
     })
   })
 
