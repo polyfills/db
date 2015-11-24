@@ -429,7 +429,7 @@
   {
     "name": "indexeddb",
     "shortName": "idb",
-    "url": "/axemclion/IndexedDBShim/master/dist/IndexedDBShim.js",
+    "url": "/axemclion/IndexedDBShim/master/dist/indexeddbshim.js",
     "repo": "axemclion/IndexedDBShim",
     "caniuse": "indexeddb",
     "features": [
