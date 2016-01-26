@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "istanbul": "0",
-    "mocha": "2",
+    "mocha": "2.4.1",
     "polyfill-ua": "^1.0.1",
     "request": "^2.45.0",
     "standardberry": "*"
